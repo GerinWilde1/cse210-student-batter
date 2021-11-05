@@ -1,6 +1,6 @@
 import random
 from game import constants
-from game.director import Director
+from game.Director import Director
 from game.actor import Actor
 from game.point import Point
 from game.control_actors_action import ControlActorsAction
