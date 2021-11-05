@@ -4,10 +4,8 @@ from game.point import Point
 class Actor:
     """A visible, moveable thing that participates in the game. The responsibility of Actor is to keep track of its appearance, position 
     and velocity in 2d space.
-
     Stereotype:
         Information Holder
-
     Attributes:
         _tag (string): The actor's tag.
         _text (string): The textual representation of the actor.
@@ -19,6 +17,7 @@ class Actor:
         """The class constructor."""
         self._description = ""
         self._text = ""
+        self._tag = ""
         self._position = Point(0, 0)
         self._velocity = Point(0, 0)
 
@@ -37,6 +36,9 @@ class Actor:
             Point: The actor's position in 2d space.
         """
         return self._position
+
+    def get_tag(self):
+        return self._tag
     
     def get_text(self):
         """Gets the actor's textual representation.
@@ -70,6 +72,9 @@ class Actor:
         """
         self._position = position
     
+    def set_tag(self, text):
+        self._tag = text
+        
     def set_text(self, text):
         """Updates the actor's text to the given value.
         

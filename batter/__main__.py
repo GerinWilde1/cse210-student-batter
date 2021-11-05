@@ -16,13 +16,26 @@ def main(screen):
     # create the cast {key: tag, value: list}
     cast = {}
 
-    x = int(constants.MAX_X / 2)
+    cast["paddle"] = []
+    x = int(constants.MAX_X / 2) - 6
     y = int(constants.MAX_Y - 1)
+    for i in range(x, (x + 11)):
+        position = Point(i, y)
+        paddle = Actor()
+        paddle.set_text("=")
+        paddle.set_position(position)
+        cast["paddle"].append(paddle)
+
+    x = int(constants.MAX_X / 2)
+    y = int(constants.MAX_Y / 2)
     position = Point(x, y)
-    paddle = Actor()
-    paddle.set_text("===========")
-    paddle.set_position(position)
-    cast["paddle"] = [paddle]
+    velocity = Point(1, -1)
+    ball = Actor()
+    ball.set_text("@")
+    ball.set_position(position)
+    ball.set_velocity(velocity)
+    cast["ball"] = []
+    cast["ball"].append(ball)
 
     cast["brick"] = []
     for x in range(5, 75):
@@ -33,15 +46,15 @@ def main(screen):
             brick.set_position(position)
             cast["brick"].append(brick)
 
-    x = int(constants.MAX_X / 2)
-    y = int(constants.MAX_Y / 2)
-    position = Point(x, y)
-    velocity = Point(1, -1)
-    ball = Actor()
-    ball.set_text("@")
-    ball.set_position(position)
-    ball.set_velocity(velocity)
-    cast["ball"] = [ball]
+    cast["wall"] = []
+    l = [0,constants.MAX_X]
+    for y in range (1, constants.MAX_Y):
+        for x in l:
+            wall = Actor()
+            wall.set_text("|")
+            wall.set_position(Point(x,y))
+            cast["wall"].append(wall)
+    
     
     # create the script {key: tag, value: list}
     script = {}

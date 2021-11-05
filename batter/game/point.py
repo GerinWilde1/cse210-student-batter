@@ -1,9 +1,7 @@
 class Point:
     """Represents distance from an origin (0, 0).
-
     Stereotype:
         Information Holder
-
     Attributes:
         _x (integer): The horizontal distance.
         _y (Point): The vertical distance.
@@ -21,10 +19,8 @@ class Point:
 
     def add(self, other):
         """Gets a new point that is the sum of this and the given one.
-
         Args:
             other (Point): The Point to add.
-
         Returns:
             Point: A new Point that is the sum.
         """
@@ -34,10 +30,8 @@ class Point:
 
     def equals(self, other):
         """Whether or not this Point is equal to the given one.
-
         Args:
             other (Point): The Point to compare.
-
         Returns: 
             boolean: True if both x and y are equal; false if otherwise.
         """
