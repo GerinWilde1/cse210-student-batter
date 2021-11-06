@@ -11,7 +11,7 @@ class DrawActorsAction(Action):
         paddle = cast["paddle"]
         brick = cast["brick"] 
         wall = cast["wall"]
-        ball = cast["ball"][0] # there's only one
+        ball = cast["ball"][0] #only one
 
         self._output_service.clear_screen()
         self._output_service.draw_actors(wall, 7)
