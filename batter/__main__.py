@@ -22,7 +22,7 @@ def main(screen):
     for i in range(x, (x + 11)):
         position = Point(i, y)
         paddle = Actor()
-        paddle.set_text("=")
+        paddle.set_text("_")
         paddle.set_position(position)
         cast["paddle"].append(paddle)
 
