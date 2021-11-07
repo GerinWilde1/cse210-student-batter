@@ -40,4 +40,5 @@ root                    (project root folder)
 ## Authors
 ---
 * # TODO: Add your names and emails here
-Gerin Wilde - gerinw@byui.edu | Jose LeBaron | Juan Figueroa - j22figueroa@yahoo.com | Gerald Quispe - qui17007@byui.edu
+Gerin Wilde - gerinw@byui.edu  | Juan Figueroa - j22figueroa@yahoo.com | Gerald Quispe - qui17007@byui.edu
+Jose LeBaron - jalbertolebaron@gmail.com
